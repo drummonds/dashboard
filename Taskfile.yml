@@ -1,0 +1,20 @@
+version: "3"
+
+tasks:
+  docs:build:
+    desc: Render d2 diagram and assemble docs/
+    cmds:
+      - mkdir -p docs
+      - d2 dashboard.d2 docs/dashboard.svg
+      - cp index.html docs/index.html
+    sources:
+      - dashboard.d2
+      - index.html
+    generates:
+      - docs/dashboard.svg
+      - docs/index.html
+
+  clean:
+    desc: Remove generated files
+    cmds:
+      - rm -rf docs
