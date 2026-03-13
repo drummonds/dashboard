@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hum3 / drummonds — Repository Dashboard</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --fg: #1a1a2e;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --link: #2563eb;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+    .subtitle { color: var(--muted); margin-bottom: 2rem; }
+    .subtitle a { color: var(--link); text-decoration: none; }
+    .subtitle a:hover { text-decoration: underline; }
+    .diagram-container {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      overflow-x: auto;
+    }
+    .diagram-container object {
+      width: 100%;
+      min-height: 600px;
+    }
+    h2 { font-size: 1.3rem; margin: 2rem 0 1rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th { font-weight: 600; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; }
+    td a { color: var(--link); text-decoration: none; }
+    td a:hover { text-decoration: underline; }
+    .group-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 9999px;
+      font-weight: 500;
+    }
+    .g-gobank { background: #dbeafe; color: #1e40af; }
+    .g-parsing { background: #ffedd5; color: #c2410c; }
+    .g-godocs { background: #dcfce7; color: #166534; }
+    .g-webui { background: #f3e8ff; color: #7e22ce; }
+    .g-hardware { background: #fce7f3; color: #be185d; }
+    .g-data { background: #fef9c3; color: #a16207; }
+    .g-tooling { background: #f1f5f9; color: #475569; }
+    .g-libs { background: #e0f2fe; color: #0369a1; }
+    .g-github { background: #fee2e2; color: #dc2626; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Repository Dashboard</h1>
+  <p class="subtitle">
+    <a href="https://codeberg.org/hum3">Codeberg: hum3</a> &middot;
+    <a href="https://github.com/drummonds">GitHub: drummonds</a>
+    &mdash; public repos updated in 2026
+  </p>
+
+  <div class="diagram-container">
+    <object type="image/svg+xml" data="dashboard.svg">
+      Diagram loading&hellip; <a href="dashboard.svg">View SVG</a>
+    </object>
+  </div>
+
+  <h2>All Repositories</h2>
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Group</th><th>Description</th><th>Codeberg</th><th>GitHub</th></tr>
+    </thead>
+    <tbody>
+      <!-- GoBank Ecosystem -->
+      <tr><td>gobank</td><td><span class="group-badge g-gobank">GoBank</span></td><td>Banking platform</td><td><a href="https://codeberg.org/hum3/gobank">hum3/gobank</a></td><td><a href="https://github.com/drummonds/gobank">drummonds/gobank</a></td></tr>
+      <tr><td>go-luca</td><td><span class="group-badge g-gobank">GoBank</span></td><td>Core ledger component inspired by Luca Pacioli</td><td><a href="https://codeberg.org/hum3/go-luca">hum3/go-luca</a></td><td><a href="https://github.com/drummonds/go-luca">drummonds/go-luca</a></td></tr>
+      <tr><td>plain-text-accounting-formats</td><td><span class="group-badge g-gobank">GoBank</span></td><td>PTA tree-sitter grammar in Go</td><td><a href="https://codeberg.org/hum3/plain-text-accounting-formats">hum3/plain-text-accounting-formats</a></td><td><a href="https://github.com/drummonds/plain-text-accounting-formats">drummonds/plain-text-accounting-formats</a></td></tr>
+      <tr><td>pta2svg</td><td><span class="group-badge g-gobank">GoBank</span></td><td>PTA text to SVG conversion</td><td><a href="https://codeberg.org/hum3/pta2svg">hum3/pta2svg</a></td><td><a href="https://github.com/drummonds/pta2svg">drummonds/pta2svg</a></td></tr>
+      <tr><td>mock-fps</td><td><span class="group-badge g-gobank">GoBank</span></td><td>Mock FPS for testing</td><td><a href="https://codeberg.org/hum3/mock-fps">hum3/mock-fps</a></td><td><a href="https://github.com/drummonds/mock-fps">drummonds/mock-fps</a></td></tr>
+      <!-- Tree-sitter & Parsing -->
+      <tr><td>gotreesitter</td><td><span class="group-badge g-parsing">Parsing</span></td><td>Pure Go tree-sitter runtime</td><td><a href="https://codeberg.org/hum3/gotreesitter">hum3/gotreesitter</a></td><td><a href="https://github.com/drummonds/gotreesitter">drummonds/gotreesitter</a></td></tr>
+      <tr><td>go-tsbin</td><td><span class="group-badge g-parsing">Parsing</span></td><td>ABNF grammar to tree-sitter bin blobs</td><td><a href="https://codeberg.org/hum3/go-tsbin">hum3/go-tsbin</a></td><td>&mdash;</td></tr>
+      <tr><td>tree-sitter-pta</td><td><span class="group-badge g-parsing">Parsing</span></td><td>Tree-sitter grammar for PTA files</td><td><a href="https://codeberg.org/hum3/tree-sitter-pta">hum3/tree-sitter-pta</a></td><td><a href="https://github.com/drummonds/tree-sitter-pta">drummonds/tree-sitter-pta</a></td></tr>
+      <tr><td>tree-sitter-goluca</td><td><span class="group-badge g-parsing">Parsing</span></td><td>Tree-sitter grammar for Go-Luca files</td><td><a href="https://codeberg.org/hum3/tree-sitter-goluca">hum3/tree-sitter-goluca</a></td><td><a href="https://github.com/drummonds/tree-sitter-goluca">drummonds/tree-sitter-goluca</a></td></tr>
+      <tr><td>tree-sitter2abnf</td><td><span class="group-badge g-parsing">Parsing</span></td><td>Tree-sitter to ABNF conversion and back</td><td><a href="https://codeberg.org/hum3/tree-sitter2abnf">hum3/tree-sitter2abnf</a></td><td><a href="https://github.com/drummonds/tree-sitter2abnf">drummonds/tree-sitter2abnf</a></td></tr>
+      <!-- Godocs Ecosystem -->
+      <tr><td>godocs</td><td><span class="group-badge g-godocs">Godocs</span></td><td>Document management system for home users</td><td><a href="https://codeberg.org/hum3/godocs">hum3/godocs</a></td><td><a href="https://github.com/drummonds/godocs">drummonds/godocs</a></td></tr>
+      <tr><td>godocs-client</td><td><span class="group-badge g-godocs">Godocs</span></td><td>Go client for godocs</td><td><a href="https://codeberg.org/hum3/godocs-client">hum3/godocs-client</a></td><td><a href="https://github.com/drummonds/godocs-client">drummonds/godocs-client</a></td></tr>
+      <tr><td>godocs-hash</td><td><span class="group-badge g-godocs">Godocs</span></td><td>Hash library and tooling for godocs</td><td><a href="https://codeberg.org/hum3/godocs-hash">hum3/godocs-hash</a></td><td><a href="https://github.com/drummonds/godocs-hash">drummonds/godocs-hash</a></td></tr>
+      <tr><td>godocs-importer</td><td><span class="group-badge g-godocs">Godocs</span></td><td>Import from Evernote and other repositories</td><td><a href="https://codeberg.org/hum3/godocs-importer">hum3/godocs-importer</a></td><td><a href="https://github.com/drummonds/godocs-importer">drummonds/godocs-importer</a></td></tr>
+      <tr><td>godocs-inbox</td><td><span class="group-badge g-godocs">Godocs</span></td><td>Local LLM classifier for godocs inbox</td><td><a href="https://codeberg.org/hum3/godocs-inbox">hum3/godocs-inbox</a></td><td><a href="https://github.com/drummonds/godocs-inbox">drummonds/godocs-inbox</a></td></tr>
+      <tr><td>godocs-watcher</td><td><span class="group-badge g-godocs">Godocs</span></td><td>Directory watcher for automatic imports</td><td><a href="https://codeberg.org/hum3/godocs-watcher">hum3/godocs-watcher</a></td><td><a href="https://github.com/drummonds/godocs-watcher">drummonds/godocs-watcher</a></td></tr>
+      <!-- Web & UI -->
+      <tr><td>lofigui</td><td><span class="group-badge g-webui">Web & UI</span></td><td>HTML/CSS-first simple web front ends</td><td><a href="https://codeberg.org/hum3/lofigui">hum3/lofigui</a></td><td><a href="https://github.com/drummonds/lofigui">drummonds/lofigui</a></td></tr>
+      <tr><td>bytestoneblog</td><td><span class="group-badge g-webui">Web & UI</span></td><td>Blog on Kubernetes</td><td><a href="https://codeberg.org/hum3/bytestoneblog">hum3/bytestoneblog</a></td><td><a href="https://github.com/drummonds/bytestoneblog">drummonds/bytestoneblog</a></td></tr>
+      <tr><td>url2svg</td><td><span class="group-badge g-webui">Web & UI</span></td><td>URL to SVG representation</td><td><a href="https://codeberg.org/hum3/url2svg">hum3/url2svg</a></td><td><a href="https://github.com/drummonds/url2svg">drummonds/url2svg</a></td></tr>
+      <tr><td>hugo-golunr</td><td><span class="group-badge g-webui">Web & UI</span></td><td>Hugo lunr alternative in Go</td><td><a href="https://codeberg.org/hum3/hugo-golunr">hum3/hugo-golunr</a></td><td><a href="https://github.com/drummonds/hugo-golunr">drummonds/hugo-golunr</a></td></tr>
+      <tr><td>mermaid-go-renderer</td><td><span class="group-badge g-webui">Web & UI</span></td><td>Fast native Go Mermaid diagram renderer</td><td><a href="https://codeberg.org/hum3/mermaid-go-renderer">hum3/mermaid-go-renderer</a></td><td><a href="https://github.com/drummonds/mermaid-go-renderer">drummonds/mermaid-go-renderer</a></td></tr>
+      <!-- Hardware & Media -->
+      <tr><td>gophoto</td><td><span class="group-badge g-hardware">Hardware</span></td><td>GoKrazy picture frame</td><td><a href="https://codeberg.org/hum3/gophoto">hum3/gophoto</a></td><td><a href="https://github.com/drummonds/gophoto">drummonds/gophoto</a></td></tr>
+      <tr><td>go-thumbnails</td><td><span class="group-badge g-hardware">Hardware</span></td><td>Document thumbnail generator</td><td><a href="https://codeberg.org/hum3/go-thumbnails">hum3/go-thumbnails</a></td><td><a href="https://github.com/drummonds/go-thumbnails">drummonds/go-thumbnails</a></td></tr>
+      <tr><td>ptouch-goprint</td><td><span class="group-badge g-hardware">Hardware</span></td><td>Go port for Ptouch E550W printer</td><td><a href="https://codeberg.org/hum3/ptouch-goprint">hum3/ptouch-goprint</a></td><td><a href="https://github.com/drummonds/ptouch-goprint">drummonds/ptouch-goprint</a></td></tr>
+      <tr><td>go3dp</td><td><span class="group-badge g-hardware">Hardware</span></td><td>3D printing</td><td><a href="https://codeberg.org/hum3/go3dp">hum3/go3dp</a></td><td>&mdash;</td></tr>
+      <!-- Data & Databases -->
+      <tr><td>tartan-database</td><td><span class="group-badge g-data">Data</span></td><td>Tartan database</td><td><a href="https://codeberg.org/hum3/tartan-database">hum3/tartan-database</a></td><td>&mdash;</td></tr>
+      <tr><td>tartan_data</td><td><span class="group-badge g-data">Data</span></td><td>Tartan data</td><td><a href="https://codeberg.org/hum3/tartan_data">hum3/tartan_data</a></td><td>&mdash;</td></tr>
+      <tr><td>go-postgres</td><td><span class="group-badge g-data">Data</span></td><td>Pure Go Postgres with local file storage</td><td><a href="https://codeberg.org/hum3/go-postgres">hum3/go-postgres</a></td><td><a href="https://github.com/drummonds/go-postgres">drummonds/go-postgres</a></td></tr>
+      <tr><td>carol_sheet</td><td><span class="group-badge g-data">Data</span></td><td>Carol sheets with accordion notation</td><td><a href="https://codeberg.org/hum3/carol_sheet">hum3/carol_sheet</a></td><td><a href="https://github.com/drummonds/carol_sheet">drummonds/carol_sheet</a></td></tr>
+      <!-- Tooling -->
+      <tr><td>task-plus</td><td><span class="group-badge g-tooling">Tooling</span></td><td>Release helper for taskfile.dev</td><td><a href="https://codeberg.org/hum3/task-plus">hum3/task-plus</a></td><td><a href="https://github.com/drummonds/task-plus">drummonds/task-plus</a></td></tr>
+      <tr><td>c4test</td><td><span class="group-badge g-tooling">Tooling</span></td><td>C4 architecture testing</td><td><a href="https://codeberg.org/hum3/c4test">hum3/c4test</a></td><td><a href="https://github.com/drummonds/c4test">drummonds/c4test</a></td></tr>
+      <tr><td>dashboard</td><td><span class="group-badge g-tooling">Tooling</span></td><td>This repository dashboard</td><td><a href="https://codeberg.org/hum3/dashboard">hum3/dashboard</a></td><td>&mdash;</td></tr>
+      <!-- Libraries -->
+      <tr><td>go_labels</td><td><span class="group-badge g-libs">Library</span></td><td>Labels library</td><td><a href="https://codeberg.org/hum3/go_labels">hum3/go_labels</a></td><td>&mdash;</td></tr>
+      <tr><td>gomail</td><td><span class="group-badge g-libs">Library</span></td><td>Mail library</td><td><a href="https://codeberg.org/hum3/gomail">hum3/gomail</a></td><td>&mdash;</td></tr>
+      <!-- GitHub Only -->
+      <tr><td>charts</td><td><span class="group-badge g-github">GitHub</span></td><td>Go charting and graphing library</td><td>&mdash;</td><td><a href="https://github.com/drummonds/charts">drummonds/charts</a></td></tr>
+      <tr><td>confluence-go-api</td><td><span class="group-badge g-github">GitHub</span></td><td>Confluence REST API in Go</td><td>&mdash;</td><td><a href="https://github.com/drummonds/confluence-go-api">drummonds/confluence-go-api</a></td></tr>
+      <tr><td>doltgres-tasks</td><td><span class="group-badge g-github">GitHub</span></td><td>Doltgres tasks</td><td>&mdash;</td><td><a href="https://github.com/drummonds/doltgres-tasks">drummonds/doltgres-tasks</a></td></tr>
+      <tr><td>gopglite</td><td><span class="group-badge g-github">GitHub</span></td><td>File-based PGLite proof of concept</td><td>&mdash;</td><td><a href="https://github.com/drummonds/gopglite">drummonds/gopglite</a></td></tr>
+      <tr><td>kgt</td><td><span class="group-badge g-github">GitHub</span></td><td>BNF wrangling and railroad diagrams</td><td>&mdash;</td><td><a href="https://github.com/drummonds/kgt">drummonds/kgt</a></td></tr>
+      <tr><td>openwrt-configurator</td><td><span class="group-badge g-github">GitHub</span></td><td>OpenWrt UCI configuration CLI</td><td>&mdash;</td><td><a href="https://github.com/drummonds/openwrt-configurator">drummonds/openwrt-configurator</a></td></tr>
+      <tr><td>pglike_todo</td><td><span class="group-badge g-github">GitHub</span></td><td>Todo app testing go-pglike</td><td>&mdash;</td><td><a href="https://github.com/drummonds/pglike_todo">drummonds/pglike_todo</a></td></tr>
+    </tbody>
+  </table>
+
+  <footer>
+    Generated 2026-03-12 &middot; Diagram rendered with <a href="https://d2lang.com">d2</a>
+  </footer>
+</body>
+</html>
