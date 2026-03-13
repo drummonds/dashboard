@@ -7,12 +7,15 @@ tasks:
       - mkdir -p docs
       - d2 dashboard.d2 docs/dashboard.svg
       - cp index.html docs/index.html
+      - task-plus md2html --file README.md --dst docs --project dashboard --label Docs
     sources:
       - dashboard.d2
       - index.html
+      - README.md
     generates:
       - docs/dashboard.svg
       - docs/index.html
+      - docs/README.html
 
   clean:
     desc: Remove generated files
