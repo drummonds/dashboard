@@ -21,3 +21,8 @@ tasks:
     desc: Remove generated files
     cmds:
       - rm -rf docs
+
+  check:
+    desc: Check prior to deployment
+    cmds:
+      - task docs:build
