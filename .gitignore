@@ -1,4 +1,6 @@
+.task/
 .claude/settings.json
 .vscode
 docs/*.html
 docs/*.svg
+.vscode/tasks.json
