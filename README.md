@@ -2,7 +2,7 @@
 
 Landing page listing all public repositories across Codeberg (hum3) and GitHub (drummonds) that have been updated this year.
 
-<!-- auto:version -->Latest: v0.1.2<!-- /auto:version -->
+<!-- auto:version -->Latest: v0.1.3<!-- /auto:version -->
 
 Diagram rendered with [d2](https://d2lang.com).
 
