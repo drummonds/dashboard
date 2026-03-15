@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="680" viewBox="0 0 720 680">
+  <rect width="720" height="680" fill="white"/>
+
+  <defs>
+    <!-- Diagonal hatch patterns for clickable areas -->
+    <pattern id="hatch-blue" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#2563eb" stroke-width="0.8" stroke-opacity="0.3"/>
+    </pattern>
+    <pattern id="hatch-green" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#16a34a" stroke-width="0.8" stroke-opacity="0.35"/>
+    </pattern>
+    <pattern id="hatch-orange" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#ea580c" stroke-width="0.8" stroke-opacity="0.35"/>
+    </pattern>
+    <pattern id="hatch-purple" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#9333ea" stroke-width="0.8" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- ===== SECTION 1: SVG DIAGRAM NODE ===== -->
+  <text x="20" y="22" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0A0F25">1. Repo node in SVG diagram (d2-rendered)</text>
+
+  <!-- Group container -->
+  <rect x="40" y="42" width="320" height="180" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="200" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#0A0F25">GoBank Ecosystem</text>
+
+  <!-- Repo node — subdivided into three click zones -->
+
+  <!-- Zone A: main body (blue hatch) → scrolls to table row -->
+  <rect x="65" y="82" width="192" height="56" fill="#EDF0FD" stroke="#0D32B2" stroke-width="2"/>
+  <rect x="65" y="82" width="192" height="56" fill="url(#hatch-blue)" stroke="none"/>
+  <text x="161" y="116" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0A0F25">gobank &#x26A0;&#xFE0F;</text>
+
+  <!-- Zone B: chain icon (orange hatch) → origin forge -->
+  <rect x="257" y="82" width="32" height="28" fill="#EDF0FD" stroke="#0D32B2" stroke-width="2"/>
+  <rect x="257" y="82" width="32" height="28" fill="url(#hatch-orange)" stroke="none"/>
+  <g transform="translate(261,84)">
+    <circle cx="12" cy="12" r="11" fill="white" stroke="#DEE1EB" stroke-width="1"/>
+    <path d="M10 13.5c.3.4.6.7 1 .9.4.2.8.3 1.3.4.4 0 .9 0 1.3-.2.4-.2.8-.4 1.1-.7l1.8-1.8c.6-.6.9-1.4.9-2.2s-.3-1.7-.9-2.3c-.6-.6-1.4-.9-2.2-.9s-1.6.3-2.2.9l-1 1" stroke="#2E3346" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M14 10.5c-.3-.4-.6-.7-1-.9-.4-.2-.8-.3-1.3-.4-.4 0-.9 0-1.3.2-.4.2-.8.4-1.1.7L7.5 12c-.6.6-.9 1.4-.9 2.2s.3 1.7.9 2.3c.6.6 1.4.9 2.2.9s1.6-.3 2.2-.9l1-1" stroke="#2E3346" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Zone C: info icon (green hatch) → docs page -->
+  <rect x="257" y="110" width="32" height="28" fill="#EDF0FD" stroke="#0D32B2" stroke-width="2"/>
+  <rect x="257" y="110" width="32" height="28" fill="url(#hatch-green)" stroke="none"/>
+  <g transform="translate(261,112)">
+    <circle cx="12" cy="12" r="11" fill="white" stroke="#DEE1EB" stroke-width="1"/>
+    <circle cx="12" cy="12" r="8" fill="none" stroke="#2E3346" stroke-width="1.5"/>
+    <line x1="12" y1="15" x2="12" y2="12" stroke="#2E3346" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="12" cy="9" r="0.8" fill="#2E3346"/>
+  </g>
+
+  <!-- Second node (no warning, no subdivision) -->
+  <rect x="65" y="155" width="224" height="48" fill="#EDF0FD" stroke="#0D32B2" stroke-width="2"/>
+  <text x="177" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0A0F25">bytestoneblog</text>
+
+  <!-- Annotations for diagram node -->
+  <line x1="420" y1="56" x2="290" y2="56" stroke="#f5c518" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="420" y="48" width="155" height="17" rx="3" fill="#fffde7" stroke="#f5c518" stroke-width="1"/>
+  <text x="426" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">Group title (28px)</text>
+
+  <line x1="420" y1="82" x2="290" y2="96" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="420" y="74" width="290" height="17" rx="3" fill="#fffde7" stroke="#ea580c" stroke-width="1"/>
+  <text x="426" y="87" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">&#x1f517; Chain → codeberg.org/hum3/gobank</text>
+
+  <line x1="420" y1="104" x2="290" y2="124" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="420" y="96" width="290" height="17" rx="3" fill="#fffde7" stroke="#16a34a" stroke-width="1"/>
+  <text x="426" y="109" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">&#x24D8; Info → h3-gobank.statichost.page</text>
+
+  <line x1="420" y1="128" x2="200" y2="110" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="420" y="120" width="290" height="17" rx="3" fill="#fffde7" stroke="#2563eb" stroke-width="1"/>
+  <text x="426" y="133" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">Click body → scrolls to #gobank table row</text>
+
+  <line x1="420" y1="152" x2="228" y2="116" stroke="#f5c518" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="420" y="144" width="290" height="17" rx="3" fill="#fffde7" stroke="#f5c518" stroke-width="1"/>
+  <text x="426" y="157" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">&#x26A0;&#xFE0F; = task-plus.yml missing</text>
+
+  <line x1="420" y1="176" x2="177" y2="179" stroke="#f5c518" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="420" y="168" width="290" height="17" rx="3" fill="#fffde7" stroke="#f5c518" stroke-width="1"/>
+  <text x="426" y="181" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">No &#x26A0;&#xFE0F; = has task-plus.yml</text>
+
+  <!-- ===== SECTION 2: TABLE ROW ===== -->
+  <text x="20" y="250" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0A0F25">2. Table row — clickable cells with destinations</text>
+
+  <!-- Table header -->
+  <rect x="20" y="265" width="680" height="24" fill="#f8f9fa" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="45" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">NAME</text>
+  <text x="150" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">GROUP</text>
+  <text x="260" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">DESCRIPTION</text>
+  <text x="420" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">DOCS</text>
+  <text x="500" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">CODEBERG</text>
+  <text x="620" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">GITHUB</text>
+
+  <!-- Table data row -->
+  <rect x="20" y="289" width="680" height="30" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="45" y="309" font-family="system-ui, sans-serif" font-size="12" fill="#0A0F25">gobank</text>
+  <rect x="140" y="296" width="60" height="16" rx="9999" fill="#dbeafe"/>
+  <text x="155" y="308" font-family="system-ui, sans-serif" font-size="9" font-weight="500" fill="#1e40af">GoBank</text>
+  <text x="260" y="309" font-family="system-ui, sans-serif" font-size="12" fill="#0A0F25">Banking platform</text>
+
+  <!-- Docs cell - clickable (green) -->
+  <rect x="413" y="292" width="60" height="22" fill="url(#hatch-green)" stroke="none" rx="2"/>
+  <text x="425" y="309" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">docs</text>
+
+  <!-- Codeberg cell - clickable (orange) -->
+  <rect x="490" y="292" width="108" height="22" fill="url(#hatch-orange)" stroke="none" rx="2"/>
+  <text x="500" y="309" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">hum3/gobank</text>
+
+  <!-- GitHub cell - clickable (purple) -->
+  <rect x="610" y="292" width="85" height="22" fill="url(#hatch-purple)" stroke="none" rx="2"/>
+  <text x="620" y="309" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">drummonds/gobank</text>
+
+  <!-- Annotations for table row links -->
+  <line x1="443" y1="320" x2="443" y2="340" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="380" y="340" width="260" height="17" rx="3" fill="#fffde7" stroke="#16a34a" stroke-width="1"/>
+  <text x="386" y="353" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">h3-gobank.statichost.page (new tab)</text>
+
+  <line x1="544" y1="320" x2="544" y2="365" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="380" y="365" width="260" height="17" rx="3" fill="#fffde7" stroke="#ea580c" stroke-width="1"/>
+  <text x="386" y="378" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">codeberg.org/hum3/gobank (new tab)</text>
+
+  <line x1="652" y1="320" x2="652" y2="390" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="380" y="390" width="260" height="17" rx="3" fill="#fffde7" stroke="#9333ea" stroke-width="1"/>
+  <text x="386" y="403" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">github.com/drummonds/gobank (new tab)</text>
+
+  <!-- ===== SECTION 3: HEADER LINKS ===== -->
+  <text x="20" y="440" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0A0F25">3. Header links — all open in new tab</text>
+
+  <!-- Simulated header bar -->
+  <rect x="20" y="455" width="680" height="36" fill="#fafafa" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Codeberg link -->
+  <rect x="30" y="461" width="115" height="22" fill="url(#hatch-orange)" stroke="none" rx="2"/>
+  <text x="40" y="477" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">Codeberg: hum3</text>
+
+  <!-- GitHub link -->
+  <rect x="160" y="461" width="140" height="22" fill="url(#hatch-purple)" stroke="none" rx="2"/>
+  <text x="170" y="477" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">GitHub: drummonds</text>
+
+  <!-- StaticHost link -->
+  <rect x="315" y="461" width="75" height="22" fill="url(#hatch-green)" stroke="none" rx="2"/>
+  <text x="325" y="477" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">StaticHost</text>
+
+  <!-- Blog link -->
+  <rect x="405" y="461" width="40" height="22" fill="url(#hatch-blue)" stroke="none" rx="2"/>
+  <text x="413" y="477" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">Blog</text>
+
+  <!-- Header annotations -->
+  <line x1="87" y1="490" x2="87" y2="506" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="20" y="506" width="250" height="17" rx="3" fill="#fffde7" stroke="#ea580c" stroke-width="1"/>
+  <text x="26" y="519" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">codeberg.org/hum3 (origin forge)</text>
+
+  <line x1="230" y1="490" x2="230" y2="530" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="20" y="530" width="250" height="17" rx="3" fill="#fffde7" stroke="#9333ea" stroke-width="1"/>
+  <text x="26" y="543" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">github.com/drummonds (mirror)</text>
+
+  <line x1="352" y1="490" x2="352" y2="506" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="290" y="506" width="250" height="17" rx="3" fill="#fffde7" stroke="#16a34a" stroke-width="1"/>
+  <text x="296" y="519" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">builder.statichost.eu (docs hosting)</text>
+
+  <line x1="425" y1="490" x2="425" y2="530" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="290" y="530" width="250" height="17" rx="3" fill="#fffde7" stroke="#2563eb" stroke-width="1"/>
+  <text x="296" y="543" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">www.bytestone.uk (blog)</text>
+
+  <!-- ===== LEGEND ===== -->
+  <rect x="20" y="570" width="680" height="100" rx="6" fill="#f8f9fa" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="40" y="592" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#333">Legend — hatched areas are clickable</text>
+
+  <!-- Hatch swatches -->
+  <rect x="40" y="602" width="30" height="14" fill="url(#hatch-blue)" stroke="#2563eb" stroke-width="0.5" rx="2"/>
+  <text x="78" y="614" font-family="system-ui, sans-serif" font-size="11" fill="#555">In-page scroll or blog</text>
+
+  <rect x="40" y="624" width="30" height="14" fill="url(#hatch-green)" stroke="#16a34a" stroke-width="0.5" rx="2"/>
+  <text x="78" y="636" font-family="system-ui, sans-serif" font-size="11" fill="#555">Docs (statichost.page, new tab)</text>
+
+  <rect x="360" y="602" width="30" height="14" fill="url(#hatch-orange)" stroke="#ea580c" stroke-width="0.5" rx="2"/>
+  <text x="398" y="614" font-family="system-ui, sans-serif" font-size="11" fill="#555">Codeberg origin (new tab)</text>
+
+  <rect x="360" y="624" width="30" height="14" fill="url(#hatch-purple)" stroke="#9333ea" stroke-width="0.5" rx="2"/>
+  <text x="398" y="636" font-family="system-ui, sans-serif" font-size="11" fill="#555">GitHub mirror (new tab)</text>
+
+  <text x="40" y="658" font-family="system-ui, sans-serif" font-size="11" fill="#888">Note: d2 currently wraps the entire node in one &lt;a&gt;. Icon zones show the intended design; subdividing requires post-processing the SVG.</text>
+</svg>

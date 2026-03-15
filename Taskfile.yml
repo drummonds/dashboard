@@ -6,20 +6,28 @@ tasks:
     cmds:
       - mkdir -p docs
       - d2 dashboard.d2 docs/dashboard.svg
+      - go run ./cmd/svgpost -svg docs/dashboard.svg -html index.html
       - |
         sed '/<!-- SVG_PLACEHOLDER -->/{
           r docs/dashboard.svg
           d
         }' index.html > docs/index.html
+      - cp annotated-repo-symbol.svg docs/
       - task-plus md2html --file README.md --dst docs --project dashboard --label Docs
+      - task-plus md2html --file repo-symbol-design.md --dst docs --project dashboard --label Design
     sources:
       - dashboard.d2
       - index.html
       - README.md
+      - repo-symbol-design.md
+      - annotated-repo-symbol.svg
+      - cmd/svgpost/main.go
     generates:
       - docs/dashboard.svg
       - docs/index.html
       - docs/README.html
+      - docs/repo-symbol-design.html
+      - docs/annotated-repo-symbol.svg
 
   clean:
     desc: Remove generated files
