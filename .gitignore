@@ -3,4 +3,4 @@
 .vscode
 docs/*.html
 docs/*.svg
-.vscode/tasks.json
+.tp-release-comment

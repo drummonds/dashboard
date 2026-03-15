@@ -29,6 +29,26 @@ tasks:
       - docs/repo-symbol-design.html
       - docs/annotated-repo-symbol.svg
 
+  fmt:
+    desc: Format Go code
+    cmds:
+      - gofmt -w .
+
+  vet:
+    desc: Vet Go code
+    cmds:
+      - go vet ./...
+
+  test:
+    desc: Run Go tests
+    cmds:
+      - go test ./...
+
+  lint:
+    desc: Lint Go code
+    cmds:
+      - golangci-lint run ./...
+
   clean:
     desc: Remove generated files
     cmds:
@@ -37,4 +57,7 @@ tasks:
   check:
     desc: Check prior to deployment
     cmds:
+      - task fmt
+      - task vet
+      - task test
       - task docs:build

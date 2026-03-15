@@ -1,6 +1,7 @@
-type: static
+type: docs
 remotes:
   - origin
+  - github
 pages_build:
   - task docs:build
 pages_deploy:
