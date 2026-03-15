@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-03-15
+
+ - forge table
+
 ## [0.1.1] - 2026-03-14
 
  - Updating d2 diagrams
