@@ -6,7 +6,11 @@ tasks:
     cmds:
       - mkdir -p docs
       - d2 dashboard.d2 docs/dashboard.svg
-      - cp index.html docs/index.html
+      - |
+        sed '/<!-- SVG_PLACEHOLDER -->/{
+          r docs/dashboard.svg
+          d
+        }' index.html > docs/index.html
       - task-plus md2html --file README.md --dst docs --project dashboard --label Docs
     sources:
       - dashboard.d2
