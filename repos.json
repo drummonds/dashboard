@@ -112,6 +112,15 @@
       "closed_issues": 0
     },
     {
+      "name": "gobank-products",
+      "group": "gobank",
+      "description": "Generic banking products with testable features",
+      "codeberg": "hum3/gobank-products",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
       "name": "gotreesitter",
       "group": "parsing",
       "description": "Pure Go tree-sitter runtime",
