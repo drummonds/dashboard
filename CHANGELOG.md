@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.1.8] - 2026-03-16
+
 ## [0.1.7] - 2026-03-16
 
  - making refresh more targetted
