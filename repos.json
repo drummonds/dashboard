@@ -64,7 +64,7 @@
       "codeberg": "hum3/gobank",
       "github": "drummonds/gobank",
       "stars": 0,
-      "open_issues": 0,
+      "open_issues": 5,
       "closed_issues": 0
     },
     {
@@ -76,7 +76,7 @@
       "github": "drummonds/go-luca",
       "stars": 0,
       "open_issues": 0,
-      "closed_issues": 0
+      "closed_issues": 1
     },
     {
       "name": "plain-text-accounting-formats",
@@ -119,8 +119,8 @@
       "codeberg": "hum3/gotreesitter",
       "github": "drummonds/gotreesitter",
       "stars": 0,
-      "open_issues": 3,
-      "closed_issues": 0
+      "open_issues": 0,
+      "closed_issues": 3
     },
     {
       "name": "go-tsbin",
@@ -150,8 +150,8 @@
       "codeberg": "hum3/tree-sitter-goluca",
       "github": "drummonds/tree-sitter-goluca",
       "stars": 0,
-      "open_issues": 1,
-      "closed_issues": 0
+      "open_issues": 0,
+      "closed_issues": 1
     },
     {
       "name": "tree-sitter2abnf",
@@ -356,7 +356,7 @@
       "codeberg": "hum3/go-postgres",
       "github": "drummonds/go-postgres",
       "stars": 1,
-      "open_issues": 0,
+      "open_issues": 1,
       "closed_issues": 0
     },
     {
@@ -485,5 +485,33 @@
       "open_issues": 0,
       "closed_issues": 0
     }
+  ],
+  "ignored": [
+    "c4test-docs",
+    "carol_sheet-docs",
+    "charts-docs",
+    "cites",
+    "go3dp-docs",
+    "go-luca-docs",
+    "go-tsbin-docs",
+    "go_labels-docs",
+    "godocs-client-docs",
+    "godocs-docs",
+    "godocs-hash-docs",
+    "godocs-importer-docs",
+    "godocs-inbox-docs",
+    "godocs-watcher-docs",
+    "gomail-docs",
+    "gophoto-docs",
+    "hugo-golunr-docs",
+    "mermaid-go-renderer-docs",
+    "mock-fps-docs",
+    "pta2svg-docs",
+    "ptouch-goprint-docs",
+    "tartan-database-docs",
+    "tartan_data-docs",
+    "tree-sitter-abnf",
+    "tree-sitter-pta-docs",
+    "url2svg-docs"
   ]
 }
