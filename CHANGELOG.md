@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.10] - 2026-03-16
+
+ - refactoring products
+
 ## [0.1.9] - 2026-03-16
 
  - Making refresh idempotent
