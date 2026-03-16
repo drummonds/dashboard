@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.7] - 2026-03-16
+
+ - making refresh more targetted
+
 ## [0.1.6] - 2026-03-16
 
  - adding referesh command
