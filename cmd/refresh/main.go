@@ -62,12 +62,14 @@ type giteaRepo struct {
 }
 
 type githubRepo struct {
-	Name            string `json:"name"`
-	Description     string `json:"description"`
-	StargazersCount int    `json:"stargazers_count"`
-	OpenIssuesCount int    `json:"open_issues_count"`
-	Fork            bool   `json:"fork"`
-	Archived        bool   `json:"archived"`
+	Name            string    `json:"name"`
+	Description     string    `json:"description"`
+	StargazersCount int       `json:"stargazers_count"`
+	OpenIssuesCount int       `json:"open_issues_count"`
+	Fork            bool      `json:"fork"`
+	Archived        bool      `json:"archived"`
+	PushedAt        time.Time `json:"pushed_at"`
+	UpdatedAt       time.Time `json:"updated_at"`
 }
 
 // forgeStats holds stats fetched from a forge API.
@@ -271,6 +273,7 @@ func fetchClosedIssuesCodeberg(owner, repo, token string) int {
 
 func fetchGitHubRepos(user, token string) map[string]forgeStats {
 	m := make(map[string]forgeStats)
+	cutoff := time.Date(time.Now().Year(), 1, 1, 0, 0, 0, 0, time.UTC)
 	page := 1
 	for {
 		url := fmt.Sprintf("https://api.github.com/users/%s/repos?per_page=100&page=%d&sort=updated", user, page)
@@ -291,15 +294,28 @@ func fetchGitHubRepos(user, token string) map[string]forgeStats {
 		if len(repos) == 0 {
 			break
 		}
+		stale := false
 		for _, r := range repos {
+			// Results sorted by updated_at desc; once we see a repo
+			// updated before this year, all remaining are older too.
+			if r.UpdatedAt.Before(cutoff) {
+				stale = true
+				break
+			}
 			if r.Fork || r.Archived {
 				continue
+			}
+			if r.PushedAt.Before(cutoff) {
+				continue // not changed this year
 			}
 			m[r.Name] = forgeStats{
 				stars:      r.StargazersCount,
 				openIssues: r.OpenIssuesCount,
 				desc:       r.Description,
 			}
+		}
+		if stale {
+			break
 		}
 		page++
 	}
