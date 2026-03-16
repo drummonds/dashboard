@@ -44,8 +44,9 @@ type Repo struct {
 }
 
 type Dashboard struct {
-	Groups []Group `json:"groups"`
-	Repos  []Repo  `json:"repos"`
+	Groups  []Group  `json:"groups"`
+	Repos   []Repo   `json:"repos"`
+	Ignored []string `json:"ignored,omitempty"`
 }
 
 // --- API response types ---
@@ -103,14 +104,20 @@ func main() {
 		tracked[r.Name] = true
 	}
 
-	// Report new repos on forges not in repos.json
+	// Build set of ignored repos
+	ignored := make(map[string]bool)
+	for _, name := range dash.Ignored {
+		ignored[name] = true
+	}
+
+	// Report new repos on forges not in repos.json (skip ignored)
 	for name := range cbRepos {
-		if !tracked[name] {
+		if !tracked[name] && !ignored[name] {
 			fmt.Printf("NEW on Codeberg: %s — %s\n", name, cbRepos[name].desc)
 		}
 	}
 	for name := range ghRepos {
-		if !tracked[name] {
+		if !tracked[name] && !ignored[name] {
 			fmt.Printf("NEW on GitHub: %s — %s\n", name, ghRepos[name].desc)
 		}
 	}
