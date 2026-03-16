@@ -18,6 +18,7 @@ tasks:
     sources:
       - dashboard.d2
       - index.html
+      - repos.json
       - README.md
       - repo-symbol-design.md
       - annotated-repo-symbol.svg
@@ -28,6 +29,11 @@ tasks:
       - docs/README.html
       - docs/repo-symbol-design.html
       - docs/annotated-repo-symbol.svg
+
+  refresh:
+    desc: Refresh dashboard stats from Codeberg/GitHub APIs
+    cmds:
+      - go run ./cmd/refresh
 
   fmt:
     desc: Format Go code

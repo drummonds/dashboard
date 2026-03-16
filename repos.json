@@ -1,0 +1,489 @@
+{
+  "groups": [
+    {
+      "id": "gobank",
+      "label": "GoBank",
+      "css": "g-gobank",
+      "comment": "GoBank Ecosystem"
+    },
+    {
+      "id": "parsing",
+      "label": "Parsing",
+      "css": "g-parsing",
+      "comment": "Tree-sitter \u0026 Parsing"
+    },
+    {
+      "id": "godocs",
+      "label": "Godocs",
+      "css": "g-godocs",
+      "comment": "Godocs Ecosystem"
+    },
+    {
+      "id": "webui",
+      "label": "Web \u0026 UI",
+      "css": "g-webui",
+      "comment": "Web \u0026 UI"
+    },
+    {
+      "id": "hardware",
+      "label": "Hardware",
+      "css": "g-hardware",
+      "comment": "Hardware \u0026 Media"
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "css": "g-data",
+      "comment": "Data \u0026 Databases"
+    },
+    {
+      "id": "tooling",
+      "label": "Tooling",
+      "css": "g-tooling",
+      "comment": "Tooling"
+    },
+    {
+      "id": "libs",
+      "label": "Library",
+      "css": "g-libs",
+      "comment": "Libraries"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "css": "g-github",
+      "comment": "GitHub Only"
+    }
+  ],
+  "repos": [
+    {
+      "name": "gobank",
+      "group": "gobank",
+      "description": "Banking platform",
+      "docs_url": "https://h3-gobank.statichost.page/",
+      "codeberg": "hum3/gobank",
+      "github": "drummonds/gobank",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "go-luca",
+      "group": "gobank",
+      "description": "Core ledger component inspired by Luca Pacioli",
+      "docs_url": "https://h3-go-luca.statichost.page/",
+      "codeberg": "hum3/go-luca",
+      "github": "drummonds/go-luca",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "plain-text-accounting-formats",
+      "group": "gobank",
+      "description": "PTA tree-sitter grammar in Go",
+      "docs_url": "https://h3-pta-formats.statichost.page/",
+      "codeberg": "hum3/plain-text-accounting-formats",
+      "github": "drummonds/plain-text-accounting-formats",
+      "stars": 0,
+      "open_issues": 1,
+      "closed_issues": 0
+    },
+    {
+      "name": "pta2svg",
+      "group": "gobank",
+      "description": "PTA text to SVG conversion",
+      "docs_url": "https://h3-pta2svg.statichost.page/",
+      "codeberg": "hum3/pta2svg",
+      "github": "drummonds/pta2svg",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "mock-fps",
+      "group": "gobank",
+      "description": "Mock FPS for testing",
+      "docs_url": "https://h3-mock-fps.statichost.page/",
+      "codeberg": "hum3/mock-fps",
+      "github": "drummonds/mock-fps",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "gotreesitter",
+      "group": "parsing",
+      "description": "Pure Go tree-sitter runtime",
+      "docs_url": "https://h3-gotreesitter.statichost.page/",
+      "codeberg": "hum3/gotreesitter",
+      "github": "drummonds/gotreesitter",
+      "stars": 0,
+      "open_issues": 3,
+      "closed_issues": 0
+    },
+    {
+      "name": "go-tsbin",
+      "group": "parsing",
+      "description": "ABNF grammar to tree-sitter bin blobs",
+      "codeberg": "hum3/go-tsbin",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "tree-sitter-pta",
+      "group": "parsing",
+      "description": "Tree-sitter grammar for PTA files",
+      "docs_url": "https://h3-tree-sitter-pta.statichost.page/",
+      "codeberg": "hum3/tree-sitter-pta",
+      "github": "drummonds/tree-sitter-pta",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "tree-sitter-goluca",
+      "group": "parsing",
+      "description": "Tree-sitter grammar for Go-Luca files",
+      "docs_url": "https://h3-tree-sitter-goluca.statichost.page/",
+      "codeberg": "hum3/tree-sitter-goluca",
+      "github": "drummonds/tree-sitter-goluca",
+      "stars": 0,
+      "open_issues": 1,
+      "closed_issues": 0
+    },
+    {
+      "name": "tree-sitter2abnf",
+      "group": "parsing",
+      "description": "Tree-sitter to ABNF conversion and back",
+      "docs_url": "https://h3-tree-sitter2abnf.statichost.page/",
+      "codeberg": "hum3/tree-sitter2abnf",
+      "github": "drummonds/tree-sitter2abnf",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "godocs",
+      "group": "godocs",
+      "description": "Document management system for home users",
+      "docs_url": "https://h3-godocs.statichost.page/",
+      "codeberg": "hum3/godocs",
+      "github": "drummonds/godocs",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "godocs-client",
+      "group": "godocs",
+      "description": "Go client for godocs",
+      "docs_url": "https://h3-godocs-client.statichost.page/",
+      "codeberg": "hum3/godocs-client",
+      "github": "drummonds/godocs-client",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "godocs-hash",
+      "group": "godocs",
+      "description": "Hash library and tooling for godocs",
+      "docs_url": "https://h3-godocs-hash.statichost.page/",
+      "codeberg": "hum3/godocs-hash",
+      "github": "drummonds/godocs-hash",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "godocs-importer",
+      "group": "godocs",
+      "description": "Import from Evernote and other repositories",
+      "docs_url": "https://h3-godocs-importer.statichost.page/",
+      "codeberg": "hum3/godocs-importer",
+      "github": "drummonds/godocs-importer",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "godocs-inbox",
+      "group": "godocs",
+      "description": "Local LLM classifier for godocs inbox",
+      "docs_url": "https://h3-godocs-inbox.statichost.page/",
+      "codeberg": "hum3/godocs-inbox",
+      "github": "drummonds/godocs-inbox",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "godocs-watcher",
+      "group": "godocs",
+      "description": "Directory watcher for automatic imports",
+      "docs_url": "https://h3-godocs-watcher.statichost.page/",
+      "codeberg": "hum3/godocs-watcher",
+      "github": "drummonds/godocs-watcher",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "lofigui",
+      "group": "webui",
+      "description": "HTML/CSS-first simple web front ends",
+      "docs_url": "https://h3-lofigui.statichost.page/",
+      "codeberg": "hum3/lofigui",
+      "github": "drummonds/lofigui",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "bytestoneblog",
+      "group": "webui",
+      "description": "Blog on Kubernetes",
+      "docs_url": "https://h3-bytestoneblog.statichost.page/",
+      "codeberg": "hum3/bytestoneblog",
+      "github": "drummonds/bytestoneblog",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "url2svg",
+      "group": "webui",
+      "description": "URL to SVG representation",
+      "docs_url": "https://h3-url2svg.statichost.page/",
+      "codeberg": "hum3/url2svg",
+      "github": "drummonds/url2svg",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "hugo-golunr",
+      "group": "webui",
+      "description": "Hugo lunr alternative in Go",
+      "docs_url": "https://h3-hugo-golunr.statichost.page/",
+      "codeberg": "hum3/hugo-golunr",
+      "github": "drummonds/hugo-golunr",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "mermaid-go-renderer",
+      "group": "webui",
+      "description": "Fast native Go Mermaid diagram renderer",
+      "docs_url": "https://h3-mermaid-go-renderer.statichost.page/",
+      "codeberg": "hum3/mermaid-go-renderer",
+      "github": "drummonds/mermaid-go-renderer",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "gophoto",
+      "group": "hardware",
+      "description": "GoKrazy picture frame",
+      "docs_url": "https://h3-gophoto.statichost.page/",
+      "codeberg": "hum3/gophoto",
+      "github": "drummonds/gophoto",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "go-thumbnails",
+      "group": "hardware",
+      "description": "Document thumbnail generator",
+      "docs_url": "https://h3-go-thumbnails.statichost.page/",
+      "codeberg": "hum3/go-thumbnails",
+      "github": "drummonds/go-thumbnails",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "ptouch-goprint",
+      "group": "hardware",
+      "description": "Go port for Ptouch E550W printer",
+      "docs_url": "https://h3-ptouch-goprint.statichost.page/",
+      "codeberg": "hum3/ptouch-goprint",
+      "github": "drummonds/ptouch-goprint",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "go3dp",
+      "group": "hardware",
+      "description": "3D printing",
+      "docs_url": "https://h3-go3dp.statichost.page/",
+      "codeberg": "hum3/go3dp",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "tartan-database",
+      "group": "data",
+      "description": "Tartan database",
+      "docs_url": "https://h3-tartan-database.statichost.page/",
+      "codeberg": "hum3/tartan-database",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "tartan_data",
+      "group": "data",
+      "description": "Tartan data",
+      "docs_url": "https://h3-tartan-data.statichost.page/",
+      "codeberg": "hum3/tartan_data",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "go-postgres",
+      "group": "data",
+      "description": "Pure Go Postgres with local file storage",
+      "docs_url": "https://h3-go-postgres.statichost.page/",
+      "codeberg": "hum3/go-postgres",
+      "github": "drummonds/go-postgres",
+      "stars": 1,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "carol_sheet",
+      "group": "data",
+      "description": "Carol sheets with accordion notation",
+      "docs_url": "https://h3-carol-sheet.statichost.page/",
+      "codeberg": "hum3/carol_sheet",
+      "github": "drummonds/carol_sheet",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "task-plus",
+      "group": "tooling",
+      "description": "Release helper for taskfile.dev",
+      "docs_url": "https://h3-task-plus.statichost.page/",
+      "codeberg": "hum3/task-plus",
+      "github": "drummonds/task-plus",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 8
+    },
+    {
+      "name": "c4test",
+      "group": "tooling",
+      "description": "C4 architecture testing",
+      "docs_url": "https://h3-c4test.statichost.page/",
+      "codeberg": "hum3/c4test",
+      "github": "drummonds/c4test",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "dashboard",
+      "group": "tooling",
+      "description": "This repository dashboard",
+      "docs_url": "https://h3-dashboard.statichost.page/",
+      "codeberg": "hum3/dashboard",
+      "stars": 1,
+      "open_issues": 1,
+      "closed_issues": 0
+    },
+    {
+      "name": "go_labels",
+      "group": "libs",
+      "description": "Labels library",
+      "docs_url": "https://h3-go-labels.statichost.page/",
+      "codeberg": "hum3/go_labels",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "gomail",
+      "group": "libs",
+      "description": "Mail library",
+      "docs_url": "https://h3-gomail.statichost.page/",
+      "codeberg": "hum3/gomail",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "charts",
+      "group": "github",
+      "description": "Go charting and graphing library",
+      "github": "drummonds/charts",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "confluence-go-api",
+      "group": "github",
+      "description": "Confluence REST API in Go",
+      "github": "drummonds/confluence-go-api",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "doltgres-tasks",
+      "group": "github",
+      "description": "Doltgres tasks",
+      "github": "drummonds/doltgres-tasks",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "gopglite",
+      "group": "github",
+      "description": "File-based PGLite proof of concept",
+      "github": "drummonds/gopglite",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "kgt",
+      "group": "github",
+      "description": "BNF wrangling and railroad diagrams",
+      "github": "drummonds/kgt",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "openwrt-configurator",
+      "group": "github",
+      "description": "OpenWrt UCI configuration CLI",
+      "github": "drummonds/openwrt-configurator",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "pglike_todo",
+      "group": "github",
+      "description": "Todo app testing go-pglike",
+      "github": "drummonds/pglike_todo",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    }
+  ]
+}
