@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.11] - 2026-03-17
+
+ - bug fix for refresh
+
 ## [0.1.10] - 2026-03-16
 
  - refactoring products
