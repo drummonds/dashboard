@@ -188,7 +188,7 @@ func fetchCodebergRepos(org, token string) map[string]forgeStats {
 	m := make(map[string]forgeStats)
 	page := 1
 	for {
-		url := fmt.Sprintf("https://codeberg.org/api/v1/orgs/%s/repos?limit=50&page=%d", org, page)
+		url := fmt.Sprintf("https://codeberg.org/api/v1/users/%s/repos?limit=50&page=%d", org, page)
 		resp, err := apiGet(url, token, "token")
 		if err != nil {
 			log.Printf("codeberg list repos page %d: %v", page, err)
