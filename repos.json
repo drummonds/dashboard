@@ -64,7 +64,7 @@
       "codeberg": "hum3/gobank",
       "github": "drummonds/gobank",
       "stars": 0,
-      "open_issues": 5,
+      "open_issues": 7,
       "closed_issues": 0
     },
     {
@@ -75,8 +75,8 @@
       "codeberg": "hum3/go-luca",
       "github": "drummonds/go-luca",
       "stars": 0,
-      "open_issues": 0,
-      "closed_issues": 1
+      "open_issues": 2,
+      "closed_issues": 2
     },
     {
       "name": "plain-text-accounting-formats",
@@ -117,7 +117,7 @@
       "description": "Generic banking products with testable features",
       "codeberg": "hum3/gobank-products",
       "stars": 0,
-      "open_issues": 0,
+      "open_issues": 2,
       "closed_issues": 0
     },
     {
@@ -128,7 +128,7 @@
       "codeberg": "hum3/gotreesitter",
       "github": "drummonds/gotreesitter",
       "stars": 0,
-      "open_issues": 0,
+      "open_issues": 2,
       "closed_issues": 3
     },
     {
@@ -170,8 +170,8 @@
       "codeberg": "hum3/tree-sitter2abnf",
       "github": "drummonds/tree-sitter2abnf",
       "stars": 0,
-      "open_issues": 0,
-      "closed_issues": 0
+      "open_issues": 1,
+      "closed_issues": 1
     },
     {
       "name": "godocs",
@@ -247,7 +247,7 @@
       "codeberg": "hum3/lofigui",
       "github": "drummonds/lofigui",
       "stars": 1,
-      "open_issues": 2,
+      "open_issues": 4,
       "closed_issues": 0
     },
     {
@@ -365,8 +365,8 @@
       "codeberg": "hum3/go-postgres",
       "github": "drummonds/go-postgres",
       "stars": 1,
-      "open_issues": 2,
-      "closed_issues": 0
+      "open_issues": 4,
+      "closed_issues": 4
     },
     {
       "name": "carol_sheet",
@@ -387,7 +387,7 @@
       "codeberg": "hum3/task-plus",
       "github": "drummonds/task-plus",
       "stars": 0,
-      "open_issues": 1,
+      "open_issues": 3,
       "closed_issues": 8
     },
     {
@@ -408,7 +408,7 @@
       "docs_url": "https://h3-dashboard.statichost.page/",
       "codeberg": "hum3/dashboard",
       "stars": 1,
-      "open_issues": 1,
+      "open_issues": 2,
       "closed_issues": 0
     },
     {
