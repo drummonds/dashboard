@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.12] - 2026-03-26
+
+ - removing -docs
+
 ## [0.1.11] - 2026-03-17
 
  - bug fix for refresh
