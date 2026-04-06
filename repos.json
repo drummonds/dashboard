@@ -295,6 +295,16 @@
       "closed_issues": 0
     },
     {
+      "name": "gogal",
+      "group": "webui",
+      "description": "Go graphics library inspired by pygal",
+      "codeberg": "hum3/gogal",
+      "github": "drummonds/gogal",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
       "name": "gophoto",
       "group": "hardware",
       "description": "GoKrazy picture frame",

@@ -83,6 +83,8 @@ type forgeStats struct {
 func main() {
 	dataFile := flag.String("data", "repos.json", "repos data file")
 	htmlFile := flag.String("html", "index.html", "output HTML file")
+	addNew := flag.Bool("add", false, "add newly discovered repos to repos.json")
+	defaultGroup := flag.String("group", "github", "default group for added repos (used with -add)")
 	flag.Parse()
 
 	dash := loadData(*dataFile)
@@ -110,16 +112,40 @@ func main() {
 		ignored[name] = true
 	}
 
-	// Report new repos on forges not in repos.json (skip ignored)
+	// Report (and optionally add) new repos on forges not in repos.json
+	var added int
 	for name := range cbRepos {
 		if !tracked[name] && !ignored[name] {
 			fmt.Printf("NEW on Codeberg: %s — %s\n", name, cbRepos[name].desc)
+			if *addNew {
+				dash.Repos = append(dash.Repos, Repo{
+					Name:        name,
+					Group:       *defaultGroup,
+					Description: cbRepos[name].desc,
+					Codeberg:    "hum3/" + name,
+				})
+				tracked[name] = true
+				added++
+			}
 		}
 	}
 	for name := range ghRepos {
 		if !tracked[name] && !ignored[name] {
 			fmt.Printf("NEW on GitHub: %s — %s\n", name, ghRepos[name].desc)
+			if *addNew {
+				dash.Repos = append(dash.Repos, Repo{
+					Name:        name,
+					Group:       "github",
+					Description: ghRepos[name].desc,
+					GitHub:      "drummonds/" + name,
+				})
+				tracked[name] = true
+				added++
+			}
 		}
+	}
+	if added > 0 {
+		fmt.Printf("refresh: added %d new repos\n", added)
 	}
 
 	// Update stats for tracked repos
