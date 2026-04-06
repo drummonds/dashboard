@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.14] - 2026-04-06
+
+ - Add gogal to Web & UI collection and add -add flag to refresh
+
 ## [0.1.13] - 2026-03-26
 
  - Release prep
