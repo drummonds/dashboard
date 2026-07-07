@@ -53,6 +53,12 @@
       "label": "GitHub",
       "css": "g-github",
       "comment": "GitHub Only"
+    },
+    {
+      "id": "new",
+      "label": "New",
+      "css": "g-new",
+      "comment": "New (uncurated)"
     }
   ],
   "repos": [
@@ -75,7 +81,7 @@
       "codeberg": "hum3/go-luca",
       "github": "drummonds/go-luca",
       "stars": 0,
-      "open_issues": 2,
+      "open_issues": 3,
       "closed_issues": 2
     },
     {
@@ -86,7 +92,7 @@
       "codeberg": "hum3/plain-text-accounting-formats",
       "github": "drummonds/plain-text-accounting-formats",
       "stars": 0,
-      "open_issues": 1,
+      "open_issues": 2,
       "closed_issues": 0
     },
     {
@@ -128,7 +134,7 @@
       "codeberg": "hum3/gotreesitter",
       "github": "drummonds/gotreesitter",
       "stars": 0,
-      "open_issues": 2,
+      "open_issues": 3,
       "closed_issues": 3
     },
     {
@@ -159,7 +165,7 @@
       "codeberg": "hum3/tree-sitter-goluca",
       "github": "drummonds/tree-sitter-goluca",
       "stars": 0,
-      "open_issues": 0,
+      "open_issues": 1,
       "closed_issues": 1
     },
     {
@@ -247,7 +253,7 @@
       "codeberg": "hum3/lofigui",
       "github": "drummonds/lofigui",
       "stars": 1,
-      "open_issues": 4,
+      "open_issues": 5,
       "closed_issues": 0
     },
     {
@@ -301,7 +307,7 @@
       "codeberg": "hum3/gogal",
       "github": "drummonds/gogal",
       "stars": 0,
-      "open_issues": 0,
+      "open_issues": 2,
       "closed_issues": 0
     },
     {
@@ -375,7 +381,7 @@
       "codeberg": "hum3/go-postgres",
       "github": "drummonds/go-postgres",
       "stars": 1,
-      "open_issues": 4,
+      "open_issues": 6,
       "closed_issues": 4
     },
     {
@@ -396,9 +402,9 @@
       "docs_url": "https://h3-task-plus.statichost.page/",
       "codeberg": "hum3/task-plus",
       "github": "drummonds/task-plus",
-      "stars": 0,
-      "open_issues": 3,
-      "closed_issues": 8
+      "stars": 1,
+      "open_issues": 1,
+      "closed_issues": 16
     },
     {
       "name": "c4test",
@@ -437,8 +443,8 @@
       "description": "Mail library",
       "docs_url": "https://h3-gomail.statichost.page/",
       "codeberg": "hum3/gomail",
-      "stars": 0,
-      "open_issues": 0,
+      "stars": 1,
+      "open_issues": 2,
       "closed_issues": 0
     },
     {
@@ -500,6 +506,132 @@
       "group": "github",
       "description": "Todo app testing go-pglike",
       "github": "drummonds/pglike_todo",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "gobank-accounts",
+      "group": "new",
+      "description": "Banking chart of accounts, financial reports (P\u0026L, Balance Sheet), and accounting periods — built on go-luca",
+      "codeberg": "hum3/gobank-accounts",
+      "stars": 0,
+      "open_issues": 3,
+      "closed_issues": 0
+    },
+    {
+      "name": "tree-sitter-yabnf",
+      "group": "new",
+      "description": "YABNF: ABNF (RFC 5234 + RFC 7405) extended with annotations for tree-sitter grammar concepts",
+      "codeberg": "hum3/tree-sitter-yabnf",
+      "stars": 0,
+      "open_issues": 2,
+      "closed_issues": 0
+    },
+    {
+      "name": "gobank-db",
+      "group": "new",
+      "description": "Core database abstraction for gobank — shared schema, multi-user base, built on go-postgres",
+      "codeberg": "hum3/gobank-db",
+      "stars": 0,
+      "open_issues": 3,
+      "closed_issues": 0
+    },
+    {
+      "name": "gsdf-3mf",
+      "group": "new",
+      "description": "Write 3mf files from GSDF sources",
+      "codeberg": "hum3/gsdf-3mf",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "contact-print",
+      "group": "new",
+      "description": "For making contact prints from a directory",
+      "codeberg": "hum3/contact-print",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "lofidb",
+      "group": "new",
+      "description": "Embeddable database browser for Go: Bulma-styled HTML over a *sql.DB. Same code path on PostgreSQL and pglike (go-postgres), including in WASM.",
+      "codeberg": "hum3/lofidb",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "golabel",
+      "group": "new",
+      "description": "Label printer",
+      "codeberg": "hum3/golabel",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "pebble-jog",
+      "group": "new",
+      "description": "Jogging app for Pebble Time 2",
+      "codeberg": "hum3/pebble-jog",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "annotate",
+      "group": "new",
+      "description": "Method of annotating a picture online so that for instace all the people can be identified.",
+      "codeberg": "hum3/annotate",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "tartan-dictionary",
+      "group": "new",
+      "description": "",
+      "codeberg": "hum3/tartan-dictionary",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "gobanks-customers",
+      "group": "new",
+      "description": "Go library for encrypted customer PII storage",
+      "codeberg": "hum3/gobanks-customers",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "discproducer",
+      "group": "new",
+      "description": "Linux interface to Epson Discprinter PP-100II using USB",
+      "codeberg": "hum3/discproducer",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "gobank-workflow",
+      "group": "new",
+      "description": "Banking workflow engine using go-workflows — daily tasks (interest accrual), scheduled jobs, and orchestrated processes",
+      "codeberg": "hum3/gobank-workflow",
+      "stars": 0,
+      "open_issues": 2,
+      "closed_issues": 0
+    },
+    {
+      "name": "charts-docs",
+      "group": "new",
+      "description": "Documentation of charts and comparison with other charting programs",
+      "github": "drummonds/charts-docs",
       "stars": 0,
       "open_issues": 0,
       "closed_issues": 0
