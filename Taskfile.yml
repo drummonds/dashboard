@@ -35,6 +35,15 @@ tasks:
     cmds:
       - go run ./cmd/refresh
 
+  dia:
+    desc: Scan forges, refresh diagrams, commit and push to update the dashboard
+    cmds:
+      - go run ./cmd/refresh -add
+      - task docs:build
+      - git add repos.json index.html dashboard.d2 docs/dashboard.svg docs/index.html
+      - git diff --cached --quiet || git commit -m "Refresh dashboard stats and diagrams"
+      - git push origin main
+
   fmt:
     desc: Format Go code
     cmds:
