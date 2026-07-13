@@ -635,6 +635,15 @@
       "stars": 0,
       "open_issues": 0,
       "closed_issues": 0
+    },
+    {
+      "name": "LinuxEpsonLFP",
+      "group": "new",
+      "description": "Driver for SC5000P",
+      "codeberg": "hum3/LinuxEpsonLFP",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
     }
   ],
   "ignored": [
