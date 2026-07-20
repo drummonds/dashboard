@@ -644,6 +644,24 @@
       "stars": 0,
       "open_issues": 0,
       "closed_issues": 0
+    },
+    {
+      "name": "godatacolor",
+      "group": "new",
+      "description": "Using the NIX for data colour calibration",
+      "codeberg": "hum3/godatacolor",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "gonixcolor",
+      "group": "new",
+      "description": "Go USB driver for Nix Spectro 2",
+      "codeberg": "hum3/gonixcolor",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
     }
   ],
   "ignored": [
