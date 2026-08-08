@@ -6,6 +6,8 @@ tasks:
     cmds:
       - mkdir -p docs
       - d2 dashboard.d2 docs/dashboard.svg
+      # d2 writes 0600; rsync deploy preserves modes, so open it up for Caddy
+      - chmod 644 docs/dashboard.svg
       - go run ./cmd/svgpost -svg docs/dashboard.svg -html index.html
       - |
         sed '/<!-- SVG_PLACEHOLDER -->/{
