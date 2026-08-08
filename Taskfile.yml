@@ -38,13 +38,15 @@ tasks:
       - go run ./cmd/refresh
 
   dia:
-    desc: Scan forges, refresh diagrams, commit and push to update the dashboard
+    desc: Scan forges, refresh diagrams, commit, push and deploy the dashboard
     cmds:
       - go run ./cmd/refresh -add
       - task docs:build
       - git add repos.json index.html dashboard.d2 docs/dashboard.svg docs/index.html
       - git diff --cached --quiet || git commit -m "Refresh dashboard stats and diagrams"
       - git push origin main
+      # statichost rebuilt from git on its own; the rsync site needs an explicit deploy
+      - task-plus pages deploy
 
   fmt:
     desc: Format Go code
