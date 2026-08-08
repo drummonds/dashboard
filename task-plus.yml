@@ -5,5 +5,5 @@ remotes:
 pages_build:
   - task docs:build
 pages_deploy:
-  - type: statichost
-    site: h3-dashboard
+  - type: rsync
+    site: dashboard

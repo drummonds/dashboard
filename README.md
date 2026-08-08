@@ -1,6 +1,6 @@
 # dashboard
 
-Landing page listing all public repositories across Codeberg (hum3) and GitHub (drummonds) that have been updated this year.
+Landing page listing all public repositories across Forgejo (git.bytestone.uk, hum3) and GitHub (drummonds) that have been updated this year.
 
 <!-- auto:version -->Latest: v0.1.14<!-- /auto:version -->
 
@@ -18,7 +18,6 @@ tp pages        # preview locally
 <!-- auto:links -->
 | | |
 |---|---|
-| Documentation | https://h3-dashboard.statichost.page/ |
-| Source (Codeberg) | https://codeberg.org/hum3/dashboard |
-| Mirror (GitHub) | https://github.com/drummonds/dashboard |
+| Documentation | https://dashboard.docs.bytestone.uk/ |
+| Source | https://git.bytestone.uk/hum3/dashboard |
 <!-- /auto:links -->

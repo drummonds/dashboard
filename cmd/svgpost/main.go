@@ -17,9 +17,9 @@ import (
 )
 
 type repoInfo struct {
-	DocsURL     string
-	CodebergURL string
-	GitHubURL   string
+	DocsURL    string
+	ForgejoURL string
+	GitHubURL  string
 }
 
 func main() {
@@ -61,9 +61,9 @@ func parseHTML(path string) map[string]repoInfo {
 		if hrefs := hrefRe.FindStringSubmatch(cells[3]); hrefs != nil {
 			info.DocsURL = hrefs[1]
 		}
-		// Cell 4 = Codeberg
+		// Cell 4 = Forgejo
 		if hrefs := hrefRe.FindStringSubmatch(cells[4]); hrefs != nil {
-			info.CodebergURL = hrefs[1]
+			info.ForgejoURL = hrefs[1]
 		}
 		// Cell 5 = GitHub
 		if hrefs := hrefRe.FindStringSubmatch(cells[5]); hrefs != nil {
@@ -173,10 +173,10 @@ func linkIcons(svg string, nodeOrder []string, urls map[string]repoInfo) string 
 				url = info.DocsURL
 			}
 		} else {
-			// Chain icon → origin forge (Codeberg preferred, GitHub fallback)
+			// Chain icon → origin forge (Forgejo preferred, GitHub fallback)
 			if !hasTitle(fragment) {
-				if info.CodebergURL != "" {
-					url = info.CodebergURL
+				if info.ForgejoURL != "" {
+					url = info.ForgejoURL
 				} else {
 					url = info.GitHubURL
 				}
@@ -188,8 +188,8 @@ func linkIcons(svg string, nodeOrder []string, urls map[string]repoInfo) string 
 		if isInfoIcon && !hasTitle(fragment) {
 			// This is actually the chain icon — d2 order might vary.
 			// Re-check: if this one has no <title>, it's chain; use forge URL.
-			if info.CodebergURL != "" {
-				url = info.CodebergURL
+			if info.ForgejoURL != "" {
+				url = info.ForgejoURL
 			} else {
 				url = info.GitHubURL
 			}

@@ -61,11 +61,11 @@
 
   <line x1="420" y1="82" x2="290" y2="96" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="420" y="74" width="290" height="17" rx="3" fill="#fffde7" stroke="#ea580c" stroke-width="1"/>
-  <text x="426" y="87" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">&#x1f517; Chain → codeberg.org/hum3/gobank</text>
+  <text x="426" y="87" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">&#x1f517; Chain → git.bytestone.uk/hum3/gobank</text>
 
   <line x1="420" y1="104" x2="290" y2="124" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="420" y="96" width="290" height="17" rx="3" fill="#fffde7" stroke="#16a34a" stroke-width="1"/>
-  <text x="426" y="109" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">&#x24D8; Info → h3-gobank.statichost.page</text>
+  <text x="426" y="109" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">&#x24D8; Info → gobank.docs.bytestone.uk</text>
 
   <line x1="420" y1="128" x2="200" y2="110" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="420" y="120" width="290" height="17" rx="3" fill="#fffde7" stroke="#2563eb" stroke-width="1"/>
@@ -88,7 +88,7 @@
   <text x="150" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">GROUP</text>
   <text x="260" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">DESCRIPTION</text>
   <text x="420" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">DOCS</text>
-  <text x="500" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">CODEBERG</text>
+  <text x="500" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">FORGEJO</text>
   <text x="620" y="281" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#6b7280">GITHUB</text>
 
   <!-- Table data row -->
@@ -102,7 +102,7 @@
   <rect x="413" y="292" width="60" height="22" fill="url(#hatch-green)" stroke="none" rx="2"/>
   <text x="425" y="309" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">docs</text>
 
-  <!-- Codeberg cell - clickable (orange) -->
+  <!-- Forgejo cell - clickable (orange) -->
   <rect x="490" y="292" width="108" height="22" fill="url(#hatch-orange)" stroke="none" rx="2"/>
   <text x="500" y="309" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">hum3/gobank</text>
 
@@ -113,11 +113,11 @@
   <!-- Annotations for table row links -->
   <line x1="443" y1="320" x2="443" y2="340" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="380" y="340" width="260" height="17" rx="3" fill="#fffde7" stroke="#16a34a" stroke-width="1"/>
-  <text x="386" y="353" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">h3-gobank.statichost.page (new tab)</text>
+  <text x="386" y="353" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">gobank.docs.bytestone.uk (new tab)</text>
 
   <line x1="544" y1="320" x2="544" y2="365" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="380" y="365" width="260" height="17" rx="3" fill="#fffde7" stroke="#ea580c" stroke-width="1"/>
-  <text x="386" y="378" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">codeberg.org/hum3/gobank (new tab)</text>
+  <text x="386" y="378" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">git.bytestone.uk/hum3/gobank (new tab)</text>
 
   <line x1="652" y1="320" x2="652" y2="390" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="380" y="390" width="260" height="17" rx="3" fill="#fffde7" stroke="#9333ea" stroke-width="1"/>
@@ -129,17 +129,17 @@
   <!-- Simulated header bar -->
   <rect x="20" y="455" width="680" height="36" fill="#fafafa" stroke="#e5e7eb" stroke-width="1"/>
 
-  <!-- Codeberg link -->
+  <!-- Forgejo link -->
   <rect x="30" y="461" width="115" height="22" fill="url(#hatch-orange)" stroke="none" rx="2"/>
-  <text x="40" y="477" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">Codeberg: hum3</text>
+  <text x="40" y="477" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">Forgejo: hum3</text>
 
   <!-- GitHub link -->
   <rect x="160" y="461" width="140" height="22" fill="url(#hatch-purple)" stroke="none" rx="2"/>
   <text x="170" y="477" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">GitHub: drummonds</text>
 
-  <!-- StaticHost link -->
+  <!-- Docs link -->
   <rect x="315" y="461" width="75" height="22" fill="url(#hatch-green)" stroke="none" rx="2"/>
-  <text x="325" y="477" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">StaticHost</text>
+  <text x="325" y="477" font-family="system-ui, sans-serif" font-size="12" fill="#2563eb">Docs</text>
 
   <!-- Blog link -->
   <rect x="405" y="461" width="40" height="22" fill="url(#hatch-blue)" stroke="none" rx="2"/>
@@ -148,7 +148,7 @@
   <!-- Header annotations -->
   <line x1="87" y1="490" x2="87" y2="506" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="20" y="506" width="250" height="17" rx="3" fill="#fffde7" stroke="#ea580c" stroke-width="1"/>
-  <text x="26" y="519" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">codeberg.org/hum3 (origin forge)</text>
+  <text x="26" y="519" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">git.bytestone.uk/hum3 (origin forge)</text>
 
   <line x1="230" y1="490" x2="230" y2="530" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="20" y="530" width="250" height="17" rx="3" fill="#fffde7" stroke="#9333ea" stroke-width="1"/>
@@ -156,7 +156,7 @@
 
   <line x1="352" y1="490" x2="352" y2="506" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="290" y="506" width="250" height="17" rx="3" fill="#fffde7" stroke="#16a34a" stroke-width="1"/>
-  <text x="296" y="519" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">builder.statichost.eu (docs hosting)</text>
+  <text x="296" y="519" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#333">docs.bytestone.uk (docs hosting)</text>
 
   <line x1="425" y1="490" x2="425" y2="530" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="290" y="530" width="250" height="17" rx="3" fill="#fffde7" stroke="#2563eb" stroke-width="1"/>
@@ -171,10 +171,10 @@
   <text x="78" y="614" font-family="system-ui, sans-serif" font-size="11" fill="#555">In-page scroll or blog</text>
 
   <rect x="40" y="624" width="30" height="14" fill="url(#hatch-green)" stroke="#16a34a" stroke-width="0.5" rx="2"/>
-  <text x="78" y="636" font-family="system-ui, sans-serif" font-size="11" fill="#555">Docs (statichost.page, new tab)</text>
+  <text x="78" y="636" font-family="system-ui, sans-serif" font-size="11" fill="#555">Docs (docs.bytestone.uk, new tab)</text>
 
   <rect x="360" y="602" width="30" height="14" fill="url(#hatch-orange)" stroke="#ea580c" stroke-width="0.5" rx="2"/>
-  <text x="398" y="614" font-family="system-ui, sans-serif" font-size="11" fill="#555">Codeberg origin (new tab)</text>
+  <text x="398" y="614" font-family="system-ui, sans-serif" font-size="11" fill="#555">Forgejo origin (new tab)</text>
 
   <rect x="360" y="624" width="30" height="14" fill="url(#hatch-purple)" stroke="#9333ea" stroke-width="0.5" rx="2"/>
   <text x="398" y="636" font-family="system-ui, sans-serif" font-size="11" fill="#555">GitHub mirror (new tab)</text>

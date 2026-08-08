@@ -31,7 +31,7 @@ tasks:
       - docs/annotated-repo-symbol.svg
 
   refresh:
-    desc: Refresh dashboard stats from Codeberg/GitHub APIs
+    desc: Refresh dashboard stats from Forgejo/GitHub APIs
     cmds:
       - go run ./cmd/refresh
 

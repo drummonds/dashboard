@@ -20,8 +20,8 @@ Each repository is a d2 rectangle with:
 
 d2 automatically adds two 32x32 circle icons to the bottom-right of each node:
 
-- **Chain icon** — intended to link to the origin forge (`codeberg.org/hum3/<name>`)
-- **Info icon** — intended to link to the docs page (`h3-<name>.statichost.page`)
+- **Chain icon** — intended to link to the origin forge (`git.bytestone.uk/hum3/<name>`)
+- **Info icon** — intended to link to the docs page (`<name>.docs.bytestone.uk`)
 
 Currently d2 wraps the entire node in a single `<a>` (scrolling to the table row). To make each icon an independent click target the node rectangle must be subdivided in the SVG — this requires post-processing the d2 output.
 
@@ -38,19 +38,19 @@ All clickable areas are shown with diagonal hatching in the annotated diagram, c
 | Zone | Hatch | Destination |
 |---|---|---|
 | Body (rectangle) | blue | Scrolls to `#<name>` table row (in-page) |
-| Chain icon | orange | Origin forge: `codeberg.org/hum3/<name>` (new tab) |
-| Info icon | green | Docs: `h3-<name>.statichost.page` (new tab) |
+| Chain icon | orange | Origin forge: `git.bytestone.uk/hum3/<name>` (new tab) |
+| Info icon | green | Docs: `<name>.docs.bytestone.uk` (new tab) |
 
 ### Table row links
 
 | Column | Hatch | Destination |
 |---|---|---|
-| Docs | green | `https://h3-<name>.statichost.page/` (new tab) |
-| Codeberg | orange | `https://codeberg.org/hum3/<name>` (new tab) |
+| Docs | green | `https://<name>.docs.bytestone.uk/` (new tab) |
+| Forgejo | orange | `https://git.bytestone.uk/hum3/<name>` (new tab) |
 | GitHub | purple | `https://github.com/drummonds/<name>` (new tab) |
 
 ### Header links
-The page header links to the forge organisations, StaticHost admin, and blog. All external links (`https://`) open in a new tab via a `target="_blank"` script.
+The page header links to the forge organisations, docs index, and blog. All external links (`https://`) open in a new tab via a `target="_blank"` script.
 
 ## Group Container
 
@@ -80,7 +80,7 @@ The diagram is defined in `dashboard.d2` and rendered to `docs/dashboard.svg` vi
 
 After d2 renders the SVG, `cmd/svgpost` post-processes it to wrap each appendix icon in an `<a>` tag:
 
-- **Info icon** → links to the repo's docs page (`h3-<name>.statichost.page`)
-- **Chain icon** → links to the origin forge (Codeberg), falling back to GitHub for GitHub-only repos
+- **Info icon** → links to the repo's docs page (`<name>.docs.bytestone.uk`)
+- **Chain icon** → links to the origin forge (Forgejo), falling back to GitHub for GitHub-only repos
 
 URLs are extracted from the table in `index.html`, so the SVG links stay in sync with the table automatically.

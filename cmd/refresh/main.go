@@ -1,10 +1,10 @@
-// refresh fetches repository stats from Codeberg and GitHub APIs,
-// updates repos.json, and regenerates index.html.
+// refresh fetches repository stats from Forgejo (git.bytestone.uk) and
+// GitHub APIs, updates repos.json, and regenerates index.html.
 //
 // Environment variables:
 //
-//	CODEBERG_APIKEY — Codeberg/Gitea API token (optional, avoids rate limits)
-//	GITHUB_TOKEN    — GitHub API token (optional, avoids rate limits)
+//	BYTESTONE_FORGEJO_TOKEN — Forgejo API token (optional, avoids rate limits)
+//	GITHUB_TOKEN            — GitHub API token (optional, avoids rate limits)
 package main
 
 import (
@@ -36,7 +36,7 @@ type Repo struct {
 	Group        string `json:"group"`
 	Description  string `json:"description"`
 	DocsURL      string `json:"docs_url,omitempty"`
-	Codeberg     string `json:"codeberg,omitempty"`
+	Forgejo      string `json:"forgejo,omitempty"`
 	GitHub       string `json:"github,omitempty"`
 	Stars        int    `json:"stars"`
 	OpenIssues   int    `json:"open_issues"`
@@ -90,15 +90,11 @@ func main() {
 
 	dash := loadData(*dataFile)
 
-	codebergToken := os.Getenv("CODEBERG_APIKEY")
+	forgejoToken := os.Getenv("BYTESTONE_FORGEJO_TOKEN")
 	githubToken := os.Getenv("GITHUB_TOKEN")
 
 	// Fetch repo lists from forges
-	cbRepos := fetchCodebergRepos("hum3", codebergToken)
-	if len(cbRepos) == 0 {
-		// hum3 may be a user account rather than an org
-		cbRepos = fetchCodebergUserRepos("hum3", codebergToken)
-	}
+	fjRepos := fetchForgejoRepos("hum3", forgejoToken)
 	ghRepos := fetchGitHubRepos("drummonds", githubToken)
 
 	// Build set of tracked repos
@@ -115,15 +111,15 @@ func main() {
 
 	// Report (and optionally add) new repos on forges not in repos.json
 	var added int
-	for name := range cbRepos {
+	for name := range fjRepos {
 		if !tracked[name] && !ignored[name] {
-			fmt.Printf("NEW on Codeberg: %s — %s\n", name, cbRepos[name].desc)
+			fmt.Printf("NEW on Forgejo: %s — %s\n", name, fjRepos[name].desc)
 			if *addNew {
 				dash.Repos = append(dash.Repos, Repo{
 					Name:        name,
 					Group:       *defaultGroup,
-					Description: cbRepos[name].desc,
-					Codeberg:    "hum3/" + name,
+					Description: fjRepos[name].desc,
+					Forgejo:     "hum3/" + name,
 				})
 				tracked[name] = true
 				added++
@@ -153,14 +149,14 @@ func main() {
 	for i := range dash.Repos {
 		r := &dash.Repos[i]
 
-		if r.Codeberg != "" {
-			parts := strings.SplitN(r.Codeberg, "/", 2)
+		if r.Forgejo != "" {
+			parts := strings.SplitN(r.Forgejo, "/", 2)
 			if len(parts) == 2 {
-				if cs, ok := cbRepos[r.Name]; ok {
-					r.Stars = cs.stars
-					r.OpenIssues = cs.openIssues
+				if fs, ok := fjRepos[r.Name]; ok {
+					r.Stars = fs.stars
+					r.OpenIssues = fs.openIssues
 				}
-				r.ClosedIssues = fetchClosedIssuesCodeberg(parts[0], parts[1], codebergToken)
+				r.ClosedIssues = fetchClosedIssuesForgejo(parts[0], parts[1], forgejoToken)
 				time.Sleep(100 * time.Millisecond)
 			}
 		} else if r.GitHub != "" {
@@ -291,23 +287,25 @@ func saveData(path string, d Dashboard) {
 	}
 }
 
-// --- Codeberg (Gitea) API ---
+// --- Forgejo (Gitea) API ---
 
-func fetchCodebergRepos(org, token string) map[string]forgeStats {
+const forgejoBase = "https://git.bytestone.uk"
+
+func fetchForgejoRepos(user, token string) map[string]forgeStats {
 	m := make(map[string]forgeStats)
 	page := 1
 	for {
-		url := fmt.Sprintf("https://codeberg.org/api/v1/users/%s/repos?limit=50&page=%d", org, page)
+		url := fmt.Sprintf("%s/api/v1/users/%s/repos?limit=50&page=%d", forgejoBase, user, page)
 		resp, err := apiGet(url, token, "token")
 		if err != nil {
-			log.Printf("codeberg list repos page %d: %v", page, err)
+			log.Printf("forgejo list repos page %d: %v", page, err)
 			break
 		}
 
 		var repos []giteaRepo
 		if err := json.NewDecoder(resp.Body).Decode(&repos); err != nil {
 			resp.Body.Close()
-			log.Printf("codeberg decode page %d: %v", page, err)
+			log.Printf("forgejo decode page %d: %v", page, err)
 			break
 		}
 		resp.Body.Close()
@@ -330,48 +328,11 @@ func fetchCodebergRepos(org, token string) map[string]forgeStats {
 	return m
 }
 
-func fetchCodebergUserRepos(user, token string) map[string]forgeStats {
-	m := make(map[string]forgeStats)
-	page := 1
-	for {
-		url := fmt.Sprintf("https://codeberg.org/api/v1/users/%s/repos?limit=50&page=%d", user, page)
-		resp, err := apiGet(url, token, "token")
-		if err != nil {
-			log.Printf("codeberg user repos page %d: %v", page, err)
-			break
-		}
-
-		var repos []giteaRepo
-		if err := json.NewDecoder(resp.Body).Decode(&repos); err != nil {
-			resp.Body.Close()
-			log.Printf("codeberg decode page %d: %v", page, err)
-			break
-		}
-		resp.Body.Close()
-
-		if len(repos) == 0 {
-			break
-		}
-		for _, r := range repos {
-			if r.Fork || r.Mirror || r.Archived {
-				continue
-			}
-			m[r.Name] = forgeStats{
-				stars:      r.StarsCount,
-				openIssues: r.OpenIssuesCount,
-				desc:       r.Description,
-			}
-		}
-		page++
-	}
-	return m
-}
-
-func fetchClosedIssuesCodeberg(owner, repo, token string) int {
-	url := fmt.Sprintf("https://codeberg.org/api/v1/repos/%s/%s/issues?state=closed&type=issues&limit=1", owner, repo)
+func fetchClosedIssuesForgejo(owner, repo, token string) int {
+	url := fmt.Sprintf("%s/api/v1/repos/%s/%s/issues?state=closed&type=issues&limit=1", forgejoBase, owner, repo)
 	resp, err := apiGet(url, token, "token")
 	if err != nil {
-		log.Printf("  codeberg closed issues %s/%s: %v", owner, repo, err)
+		log.Printf("  forgejo closed issues %s/%s: %v", owner, repo, err)
 		return 0
 	}
 	defer resp.Body.Close()
@@ -503,7 +464,7 @@ type tmplRepo struct {
 	GroupLabel   string
 	Description  string
 	DocsURL      string
-	Codeberg     string
+	Forgejo      string
 	GitHub       string
 	Stars        int
 	OpenIssues   int
@@ -534,7 +495,7 @@ func generateHTML(path string, d Dashboard) {
 			GroupLabel:   g.Label,
 			Description:  r.Description,
 			DocsURL:      r.DocsURL,
-			Codeberg:     r.Codeberg,
+			Forgejo:      r.Forgejo,
 			GitHub:       r.GitHub,
 			Stars:        r.Stars,
 			OpenIssues:   r.OpenIssues,
@@ -664,9 +625,9 @@ const htmlTmpl = `<!DOCTYPE html>
 <body>
   <h1>Repository Dashboard</h1>
   <p class="subtitle">
-    <a href="https://codeberg.org/hum3">Codeberg: hum3</a> &middot;
+    <a href="https://git.bytestone.uk/hum3">Forgejo: hum3</a> &middot;
     <a href="https://github.com/drummonds">GitHub: drummonds</a> &middot;
-    <a href="https://builder.statichost.eu/team/team_01kjg7ba6zfehrpjbkn8ktc855/">StaticHost</a> &middot;
+    <a href="https://docs.bytestone.uk">Docs</a> &middot;
     <a href="https://www.bytestone.uk">Blog</a>
     &mdash; public repos updated in 2026
   </p>
@@ -678,13 +639,13 @@ const htmlTmpl = `<!DOCTYPE html>
   <h2>All Repositories</h2>
   <table>
     <thead>
-      <tr><th>Name</th><th>Group</th><th>Description</th><th>Docs</th><th>Codeberg</th><th>GitHub</th><th class="num">&#9733;</th><th class="num">Open</th><th class="num">Closed</th></tr>
+      <tr><th>Name</th><th>Group</th><th>Description</th><th>Docs</th><th>Forgejo</th><th>GitHub</th><th class="num">&#9733;</th><th class="num">Open</th><th class="num">Closed</th></tr>
     </thead>
     <tbody>
 {{- range .Groups}}
       <!-- {{.Comment}} -->
 {{- range .Repos}}
-      <tr id="{{.Name}}"><td>{{.Name}}</td><td><span class="group-badge {{.GroupCSS}}">{{.GroupLabel}}</span></td><td>{{.Description}}</td><td>{{if .DocsURL}}<a href="{{.DocsURL}}">docs</a>{{else}}&mdash;{{end}}</td><td>{{if .Codeberg}}<a href="https://codeberg.org/{{.Codeberg}}">{{.Codeberg}}</a>{{else}}&mdash;{{end}}</td><td>{{if .GitHub}}<a href="https://github.com/{{.GitHub}}">{{.GitHub}}</a>{{else}}&mdash;{{end}}</td><td class="num">{{.Stars}}</td><td class="num">{{.OpenIssues}}</td><td class="num">{{.ClosedIssues}}</td></tr>
+      <tr id="{{.Name}}"><td>{{.Name}}</td><td><span class="group-badge {{.GroupCSS}}">{{.GroupLabel}}</span></td><td>{{.Description}}</td><td>{{if .DocsURL}}<a href="{{.DocsURL}}">docs</a>{{else}}&mdash;{{end}}</td><td>{{if .Forgejo}}<a href="https://git.bytestone.uk/{{.Forgejo}}">{{.Forgejo}}</a>{{else}}&mdash;{{end}}</td><td>{{if .GitHub}}<a href="https://github.com/{{.GitHub}}">{{.GitHub}}</a>{{else}}&mdash;{{end}}</td><td class="num">{{.Stars}}</td><td class="num">{{.OpenIssues}}</td><td class="num">{{.ClosedIssues}}</td></tr>
 {{- end}}
 {{- end}}
     </tbody>
