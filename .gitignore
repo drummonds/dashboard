@@ -3,4 +3,5 @@
 .vscode
 docs/*.html
 docs/*.svg
+docs/*.ico
 .tp-release-comment

@@ -14,7 +14,7 @@ tasks:
           r docs/dashboard.svg
           d
         }' index.html > docs/index.html
-      - cp annotated-repo-symbol.svg docs/
+      - cp annotated-repo-symbol.svg favicon.svg favicon.ico docs/
       - task-plus md2html --file README.md --dst docs --project dashboard --label Docs
       - task-plus md2html --file repo-symbol-design.md --dst docs --project dashboard --label Design
     sources:
@@ -45,7 +45,6 @@ tasks:
       - git add repos.json index.html dashboard.d2 docs/dashboard.svg docs/index.html
       - git diff --cached --quiet || git commit -m "Refresh dashboard stats and diagrams"
       - git push origin main
-      # statichost rebuilt from git on its own; the rsync site needs an explicit deploy
       - task-plus pages deploy
 
   fmt:
