@@ -359,7 +359,7 @@
       "github": "drummonds/go-postgres",
       "stars": 0,
       "open_issues": 6,
-      "closed_issues": 4
+      "closed_issues": 10
     },
     {
       "name": "carol_sheet",
@@ -633,6 +633,15 @@
       "group": "new",
       "description": "Go USB driver for Nix Spectro 2",
       "forgejo": "hum3/gonixcolor",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
+    },
+    {
+      "name": "py-postgres",
+      "group": "new",
+      "description": "Python version of go-postrgres, using postgres syntax on a local sqlite file",
+      "forgejo": "hum3/py-postgres",
       "stars": 0,
       "open_issues": 0,
       "closed_issues": 0
