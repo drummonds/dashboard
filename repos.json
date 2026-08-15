@@ -645,6 +645,15 @@
       "stars": 0,
       "open_issues": 0,
       "closed_issues": 0
+    },
+    {
+      "name": "gonixcolour",
+      "group": "new",
+      "description": "Go USB driver for Nix Spectro 2",
+      "forgejo": "hum3/gonixcolour",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
     }
   ],
   "ignored": [
