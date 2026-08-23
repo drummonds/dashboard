@@ -5,3 +5,6 @@ docs/*.html
 docs/*.svg
 docs/*.ico
 .tp-release-comment
+
+# task-plus private local config (symlink to replicated copy)
+task-plus.local.yaml
