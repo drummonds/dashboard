@@ -663,6 +663,15 @@
       "stars": 0,
       "open_issues": 0,
       "closed_issues": 0
+    },
+    {
+      "name": "go-dbexplorer",
+      "group": "new",
+      "description": "Lightweight HTML database explorer for Go database/sql (mirror of git.bytestone.uk/hum3/go-dbexplorer)",
+      "github": "drummonds/go-dbexplorer",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
     }
   ],
   "ignored": [
