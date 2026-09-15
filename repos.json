@@ -672,6 +672,15 @@
       "stars": 0,
       "open_issues": 0,
       "closed_issues": 0
+    },
+    {
+      "name": "scanbook",
+      "group": "new",
+      "description": "",
+      "forgejo": "hum3/scanbook",
+      "stars": 0,
+      "open_issues": 0,
+      "closed_issues": 0
     }
   ],
   "ignored": [
