@@ -82,7 +82,7 @@
       "github": "drummonds/go-luca",
       "stars": 0,
       "open_issues": 3,
-      "closed_issues": 2
+      "closed_issues": 0
     },
     {
       "name": "plain-text-accounting-formats",
@@ -131,7 +131,7 @@
       "github": "drummonds/gotreesitter",
       "stars": 0,
       "open_issues": 3,
-      "closed_issues": 3
+      "closed_issues": 0
     },
     {
       "name": "go-tsbin",
@@ -160,7 +160,7 @@
       "github": "drummonds/tree-sitter-goluca",
       "stars": 0,
       "open_issues": 1,
-      "closed_issues": 1
+      "closed_issues": 0
     },
     {
       "name": "tree-sitter2abnf",
@@ -170,7 +170,7 @@
       "github": "drummonds/tree-sitter2abnf",
       "stars": 0,
       "open_issues": 1,
-      "closed_issues": 1
+      "closed_issues": 0
     },
     {
       "name": "godocs",
@@ -359,7 +359,7 @@
       "github": "drummonds/go-postgres",
       "stars": 0,
       "open_issues": 7,
-      "closed_issues": 12
+      "closed_issues": 0
     },
     {
       "name": "carol_sheet",
@@ -380,7 +380,7 @@
       "github": "drummonds/task-plus",
       "stars": 0,
       "open_issues": 1,
-      "closed_issues": 16
+      "closed_issues": 0
     },
     {
       "name": "c4test",
