@@ -398,6 +398,7 @@
       "description": "This repository dashboard",
       "docs_url": "https://dashboard.docs.bytestone.uk/",
       "forgejo": "hum3/dashboard",
+      "github": "drummonds/dashboard",
       "stars": 0,
       "open_issues": 2,
       "closed_issues": 0

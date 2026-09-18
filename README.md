@@ -20,4 +20,5 @@ tp pages        # preview locally
 |---|---|
 | Documentation | https://dashboard.docs.bytestone.uk/ |
 | Source | https://git.bytestone.uk/hum3/dashboard |
+| Mirror (GitHub) | https://github.com/drummonds/dashboard |
 <!-- /auto:links -->
